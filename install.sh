@@ -35,5 +35,4 @@ install_plugin "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-synta
 install_plugin "zsh-bat" "https://github.com/fdellwing/zsh-bat.git"
 
 echo
-echo "Done. Reload with:"
-echo "exec zsh"
+echo "Done"
