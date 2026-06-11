@@ -11,7 +11,7 @@ export ZSH="${ZSH:-$HOME/.oh-my-zsh}"
 
 # Use an installed theme
 # Your current "pi" theme is not installed on this machine.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="pi"
 
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 14
