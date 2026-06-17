@@ -8,6 +8,8 @@ fi
 
 # Path to Oh My Zsh
 export ZSH="${ZSH:-$HOME/.oh-my-zsh}"
+export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Use an installed theme
 # Your current "pi" theme is not installed on this machine.
