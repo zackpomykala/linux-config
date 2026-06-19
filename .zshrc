@@ -50,7 +50,7 @@ alias py="python3.14"
 alias gc="git commit -m"
 alias ga="git add ."
 alias gs="git status"
-alias suv="sudo /home/pomykzw1/.local/bin/uv"
+alias suv="sudo $HOME/.local/bin/uv"
 alias sinfoa='sinfo -N -o "%.25N %.15O %.15C %.15e %.10t %.10m %.15P %.25G %.35E"'
 alias dmesgnv='dmesg -HT | grep -iE "nvrm|nvidia|gpu|pcie"'
 
