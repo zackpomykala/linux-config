@@ -1,7 +1,7 @@
 # Stop for non-interactive shells
 [[ ! -o interactive ]] && return
 
-# Optional system info banner
+# System info banner
 if command -v fastfetch >/dev/null 2>&1; then
   fastfetch
 fi
@@ -11,8 +11,7 @@ export ZSH="${ZSH:-$HOME/.oh-my-zsh}"
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Use an installed theme
-# Your current "pi" theme is not installed on this machine.
+# Theme
 ZSH_THEME="pi"
 
 zstyle ':omz:update' mode auto
@@ -37,8 +36,6 @@ if [[ -r "$ZSH/oh-my-zsh.sh" ]]; then
   source "$ZSH/oh-my-zsh.sh"
 fi
 
-# zsh-syntax-highlighting should be sourced after Oh My Zsh.
-# Use $HOME instead of a hard-coded username.
 if [[ -r "$ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
   source "$ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
@@ -55,12 +52,10 @@ alias suv="sudo $HOME/.local/bin/uv"
 alias sinfoa='sinfo -N -o "%.25N %.15O %.15C %.15e %.10t %.10m %.15P %.25G %.35E"'
 alias dmesgnv='dmesg -HT | grep -iE "nvrm|nvidia|gpu|pcie"'
 
-# Optional local env file
 if [[ -r "$HOME/.local/bin/env" ]]; then
   source "$HOME/.local/bin/env"
 fi
 
-# Optional opam configuration
 if [[ -r "$HOME/.opam/opam-init/init.zsh" ]]; then
   source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
 fi
