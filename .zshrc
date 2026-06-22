@@ -20,6 +20,9 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="mm/dd/yyyy"
+HISTSIZE=10000
+SAVEHIST=20000
+HISTCONTROL=ignoredups:erasedups
 
 # Plugins
 plugins=(
@@ -41,7 +44,8 @@ if [[ -r "$ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 fi
 
 # Aliases
-alias ll="ls -alrht --color=auto"
+alias ll="ls -alrh --color=auto"
+alias lt="ls -alrht --color=auto"
 alias vim="nvim"
 alias py="python3.14"
 alias gc="git commit -m"
@@ -51,6 +55,12 @@ alias gp="git push"
 alias suv="sudo $HOME/.local/bin/uv"
 alias sinfoa='sinfo -N -o "%.25N %.15O %.15C %.15e %.10t %.10m %.15P %.25G %.35E"'
 alias dmesgnv='dmesg -HT | grep -iE "nvrm|nvidia|gpu|pcie"'
+alias reload="source ~/.zshrc"
+
+# Shell functinons
+function cl() {
+  cd "$1" && ll
+}
 
 if [[ -r "$HOME/.local/bin/env" ]]; then
   source "$HOME/.local/bin/env"
