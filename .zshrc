@@ -62,6 +62,10 @@ function cl() {
   cd "$1" && ll
 }
 
+function mkdircd() {
+  mkdir "$1" && cd "$1"
+}
+
 if [[ -r "$HOME/.local/bin/env" ]]; then
   source "$HOME/.local/bin/env"
 fi
